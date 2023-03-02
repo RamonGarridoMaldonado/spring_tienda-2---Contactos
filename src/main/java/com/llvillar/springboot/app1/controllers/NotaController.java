@@ -35,8 +35,6 @@ public class NotaController {
             modelAndView.addObject("notas", notas);
             return modelAndView;
         } else {
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");  
-            String strDate = dateFormat.format(fecha);  
             List<Nota> notas = notasService.findPorTituloFecha(titulo,fecha);
     
             ModelAndView modelAndView = new ModelAndView("notas/list");
